@@ -1,85 +1,38 @@
 ---
-title: "Introducing Astro: Ship Less JavaScript"
+title: "技術的なこだわりポイント"
 description: "We're excited to announce Astro as a new way to build static websites and deliver lightning-fast performance without sacrificing a modern developer experience."
-pubDate: "2021-06-08"
+pubDate: "2024-07-09"
 hero: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy7zkrf0t6j58k7gfgd84.jpeg"
 tags: ["astro"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---
 
-There's a simple secret to building a faster website — _just ship less_.
+## こだわりポイント
 
-Unfortunately, modern web development has been trending in the opposite direction—towards _more._ More JavaScript, more features, more moving parts, and ultimately more complexity needed to keep it all running smoothly.
+- [**Astro**](https://astro.build/)という JavaScript のフレームワークを使用して、 Static Site Generator (SSG)を構築し高速なパフォーマンスを提供している
+- **Astro**を MDX コンポーネントと組み合わせて、Markdown で開発ができるように開発体験向上の工夫をした
+- ヒューマンインターフェースの講義で学んだ認知工学の知識を Tailwind や Sass などの CSS フレームワークを用いて表現している
 
-Today I'm excited to publicly share Astro: a new kind of static site builder that delivers lightning-fast performance with a modern developer experience. To design Astro, we borrowed the best parts of our favorite tools and then added a few innovations of our own, including:
+## パフォーマンス
 
-- **Bring Your Own Framework (BYOF):** Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.
-- **100% Static HTML, No JS:** Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.
-- **On-Demand Components:** Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.
-- **Fully-Featured:** Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.
-- **SEO Enabled:** Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication.
+npm のパッケージをできるだけ CloudFlare の CDN を使うことによってビルドを軽量化させて、高速なパフォーマンスを提供している
 
-This post marks the first public beta release of Astro. **Missing features and bugs are still to be expected at this early stage.** There are still some months to go before an official 1.0 release, but there are already several fast sites built with Astro in production today. We would love your early feedback as we move towards a v1.0 release later this year.
+## デプロイ
 
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides).
+Github と Vercel が連携しているため、main ブランチに push するだけで自動的にデプロイ(CD)されるように設定している
 
-## Getting Started
+## アーキテクチャ
 
-Starting a new project in Astro is easy:
+<img src="/images/astro-architecture.png" alt="アーキテクチャ" >
 
-```shell
-# create your project
-mkdir new-project-directory
-cd new-project-directory
-npm init astro
+## 使用技術
 
-# install your dependencies
-npm install
-
-# start the dev server and open your browser
-npm run dev
-```
-
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides).
-
-## How Astro Works
-
-Astro works a lot like a static site generator. If you have ever used Eleventy, Hugo, or Jekyll (or even a server-side web framework like Rails, Laravel, or Django) then you should feel right at home with Astro.
-
-In Astro, you compose your website using UI components from your favorite JavaScript web framework (React, Svelte, Vue, etc). Astro renders your entire site to static HTML during the build. The result is a fully static website with all JavaScript removed from the final page. No monolithic JavaScript application required, just static HTML that loads as fast as possible in the browser regardless of how many UI components you used to generate it.
-
-Of course, sometimes client-side JavaScript is inevitable. Image carousels, shopping carts, and auto-complete search bars are just a few examples of things that require some JavaScript to run in the browser. This is where Astro really shines: When a component needs some JavaScript, Astro only loads that one component (and any dependencies). The rest of your site continues to exist as static, lightweight HTML.
-
-In other full-stack web frameworks this level of per-component optimization would be impossible without loading the entire page in JavaScript, delaying interactivity. In Astro, this kind of [partial hydration](https://addyosmani.com/blog/rehydration/) is built into the tool itself.
-
-You can even [automatically defer components](https://codepen.io/jonneal/full/ZELvMvw) to only load once they become visible on the page with the `client:visible` directive.
-
-This new approach to web architecture is called [islands architecture](https://jasonformat.com/islands-architecture/). We didn't coin the term, but Astro may have perfected the technique. We are confident that an HTML-first, JavaScript-only-as-needed approach is the best solution for the majority of content-based websites.
-
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides)
-
-## Embracing the Pit of Success
-
-> A well-designed system makes it easy to do the right things and annoying (but not impossible) to do the wrong things<div class="source"><p>– Jeff Atwood</p>[Falling Into The Pit of Success](https://blog.codinghorror.com/falling-into-the-pit-of-success/)</div>
-
-Poor performance is often framed as a failure of the developer, but we respectfully disagree. In many cases, poor performance is a failure of tooling. It should be difficult to build a slow website.
-
-Astro's main design principle is to lead developers into what [Rico Mariani](https://twitter.com/ricomariani) dubbed "the pit of success". It is our goal to build every site "fast by default" while also delivering a familiar, modern developer experience.
-
-By building your site to static HTML by default, Astro makes it difficult (but never impossible 😉) to build a slow site.
-
-## Long-Term Sustainability
-
-Astro is built by the team of open source developers behind [Snowpack](https://snowpack.dev) and [Skypack](https://skypack.dev), with additional contributions from the community.
-
-**Astro is and always will be free.** It is an open source project released under the [MIT license](https://github.com/snowpackjs/astro/blob/main/LICENSE).
-
-We care deeply about building a more sustainable future for open source software. At the same time, we need to support Astro's development long-term. This requires money (donations alone aren't enough.)
-
-We're inspired by the early success of projects like [Tailwind](https://tailwindcss.com/), [Rome](https://rome.tools/), [Remix](https://remix.run/), [Ionic](https://ionicframework.com/), and others who are experimenting with long-term financial sustainability on top of Open Source. Over the next year we'll be exploring how we can create a sustainable business to support a 100% free, open source Astro for years to come.
-
-If your company is as excited about Astro as we are, [we'd love to hear from you.](https://astro.build/chat)
-
-Finally, I'd like to give a **HUGE** thanks to the 300+ developers who joined our earliest private beta. Your feedback has been essential in shaping Astro into the tool it is today. If you're interested in getting involved (or just following along with development) please [join us on Discord.](https://astro.build/chat)
-
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides)
+- **Astro**: JavaScript フレームワーク
+- **TpyeScript**: プログラミング言語
+- **JavaScript**: プログラミング言語
+- **React JSX**: Reactコンポーネント (XML)
+- **MDX**: Markdown と React を組み合わせたフォーマット
+- **TailwindCSS**: CSS フレームワーク
+- **Sass**: CSSプロセッサ
+- **CloudFlare**: CDNキャッシュサーバー
+- **Vercel**: サーバーレス環境

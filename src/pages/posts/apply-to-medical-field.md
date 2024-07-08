@@ -1,6 +1,6 @@
 ---
 title: "医療分野への応用例"
-pubDate: "2024-07-08"
+pubDate: "2024-07-09"
 slug: "apply-to-medical-field"
 description: "電子カルテのユーザビリティ"
 hero: "/images/medical-header.png"
