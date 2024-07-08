@@ -1,4 +1,4 @@
-# Astro Creek - a blog theme for Astro
+# 先端社会デザイン創成 技術紹介サイト
 
 ![](./public/images/creek.png)
 
