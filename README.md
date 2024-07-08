@@ -1,6 +1,6 @@
 # 先端社会デザイン創成 技術紹介サイト
 
-![](./public/images/creek.png)
+![](./public/images/astro-architecture.png)
 
 Creek is an open source blog theme for [Astro SSG](https://docs.astro.build/getting-started/).
 

@@ -1,5 +1,5 @@
 ---
-title: "医療分野"
+title: "医療分野への応用例"
 pubDate: "2024-07-08"
 slug: "apply-to-medical-field"
 description: "How to compare dates in JavaScript natively using the Date Object, without using any third-party libraries."
