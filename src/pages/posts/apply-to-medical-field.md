@@ -8,69 +8,6 @@ tags: ["medical"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---
 
-<!-- ## 電子カルテのユーザビリティ
-
-電子カルテの使いやすさを向上させるためのインターフェースデザイン研究
-
-## ユーザビリティとは
-
-_利用者が機械やコンピュータを 不自由なく使えるように考慮 した設計のことである．_
-
-1. 学習用意生
-2. 効率性
-3. 記憶しやすさ
-4. エラー
-5. 満足感
-
-の５つに分類することができる．
-ユーザビリティ評価
-医師や看護師を対象にした電子カルテの使いやすさに関する調査研究. ユーザビリティテストやインタビューを通じて, 現行システムの問題点を洗い出し, 改善策を提案する．
-説明画像
-患者ポータルの設計の評価
-患者が自分の医療情報を閲覧し, 健康管理に役立てるためのポータルサイトの設計とその効果を評価する研究. ユーザーエクスペリエンスの観点から評価
-
-説明画像
-臨床意思決定支援システム
-医療従事者は患者に対して，迅速かつ的確な診断や治療法を決断しなければならないが，これには かなりの負担 がかかる．
-診療に AI やビッグデータを使用することで, 過去のデータなどから速やかに決断を下し, 医療従事者を支援システムがある．
-
-CDSS や NEWS
-ビッグデータを活用し、サーベイランス(調査)システムやバイタルサイン(生命兆候)を点数化することで、急変リスクを判定できる
-
-説明画像
-
-## 医療情報の標準化
-
-異なる医療機関やシステム間で情報を共有しやすくし, 医療の質を向上させるための重要な取り組みである．患者の診療記録，検査結果，処方情報などの医療データが一貫性を持ち，解釈や交換が容易になることを目指す．
-
-### _医療標準化に期待されるメリット_
-
-
-
-<table>
-  <tr>
-    <th></th>
-    <th>効果(メリット)</th>
-  </tr>
-  <tr>
-    <td>国民</td>
-    <td>・スマホ等で自らの医療情報を把握でき持ち運び可能<br>・通院を要せず，タイムリーに検査結果等を把握できる</td>
-  </tr>
-  <tr>
-    <td>医療機関</td>
-    <td>・より正確な患者への問診を効率的に実施<br>
-      ・他の医療機関の診療情報提供書等の取り込み作業が不要<br>・データの二次利用へ貢献</td>
-  </tr>
-  <tr>
-    <td>保険者</td>
-    <td>・重複検査の防止<br>・医療費の適正化</td>
-  </tr>
-  <tr>
-    <td>ベンダー</td>
-    <td>・計画的かつ効率的なシステム開発が可能<br>・カスタムオーダー対応からの解放</td>
-  </tr>
-</table> -->
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -96,10 +33,6 @@ CDSS や NEWS
       display: flex;
       flex: 1;
     }
-    .sidebar {
-      width: 250px;
-      flex-shrink: 0;
-    }
     .main {
       flex: 1;
       padding: 20px;
@@ -108,9 +41,6 @@ CDSS や NEWS
       font-family: "Sawarabi Mincho", serif;
       font-weight: 400;
       font-style: normal;
-    }
-    .navbar-brand:hover .hover-text {
-      display: block;
     }
     .hospital {
       background-image: url("https://www.tottori-med.jrc.or.jp/trch/wp-content/uploads/2020/06/4023f48dfe10585327bb1d4a9c24f5b1.jpg");
@@ -202,12 +132,6 @@ CDSS や NEWS
       border-radius: 5px;
       z-index: 1;
       top: 5%;
-    }
-    .navbar-nav .nav-item:hover .hover-text {
-      display: block;
-    }
-    .navbar-nav .nav-item {
-      position: relative;
     }
   </style>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">

@@ -10,8 +10,8 @@ interface MarkdownFrontmatter {
 }
 
 const title = '認知工学';
-const description = 'A Theme for Astro';
-const seoDescription = 'Creek is a theme for Astro static site generator';
+const description = 'Artifacts for FSD Sousei Group Work';
+const seoDescription = '認知工学技術紹介サイト';
 
 const allPosts = await Astro.glob<MarkdownFrontmatter>('./posts/*.md');
 const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());

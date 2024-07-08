@@ -19,11 +19,11 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props
 let pageTitle = 'Articles';
 let pageDescription = `page ${page.currentPage} of all articles`;
-let seoTitle = 'Articles | Creek';
+let seoTitle = 'Articles | 認知工学紹介サイト';
 let seoDescription = '';
 ---
 
-<html lang="en">
+<html lang="ja">
 
 <head>
   <BaseHead title={seoTitle} description={seoDescription} />
